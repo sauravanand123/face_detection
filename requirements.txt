@@ -2,4 +2,8 @@ numpy
 pandas
 seaborn
 matplotlib
-pymysql
+flask
+opencv-python
+face_recognition
+scikit-learn
+pillow

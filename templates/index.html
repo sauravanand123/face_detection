@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Face Detection App</title>
+</head>
+<body>
+    <h2>Capture Image</h2>
+    <form action="/capture" method="POST" enctype="multipart/form-data">
+        <input type="text" name="label" placeholder="Label" required><br><br>
+        <input type="file" name="image" accept="image/*" required><br><br>
+        <button type="submit">Upload</button>
+    </form>
+    
+    <h2>Train Model</h2>
+    <form action="/train" method="POST">
+        <button type="submit">Train</button>
+    </form>
+
+    <h2>Detect Faces</h2>
+    <form action="/detect" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required><br><br>
+        <button type="submit">Detect</button>
+    </form>
+</body>
+</html>
