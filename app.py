@@ -15,10 +15,10 @@ model = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_d
 logistic_model = LogisticRegression()
 x_train, y_train = [], []
 
-@app.route('/')
-def index():
-    """Render home page"""
-    return render_template("index.html")
+# @app.route('/')
+# def index():
+#     """Render home page"""
+#     return render_template("index.html")
 
 @app.route('/capture', methods=['POST'])
 def capture_image():
