@@ -5,6 +5,7 @@ __pycache__/
 notebook/image/
 
 notebook/image2/
+uploads/
 # C extensions
 *.so
 
