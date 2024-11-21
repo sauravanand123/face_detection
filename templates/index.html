@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <title>Face Detection App</title>
@@ -21,5 +21,85 @@
         <input type="file" name="image" accept="image/*" required><br><br>
         <button type="submit">Detect</button>
     </form>
+</body>
+</html> -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Detection Attendance</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Face Detection Attendance System</h1>
+    </header>
+    <main>
+        <section id="camera">
+            <h2>Camera Feed</h2>
+            <video id="video" autoplay></video>
+            <button id="capture-button">Capture Face</button>
+        </section>
+        <section id="attendance">
+            <h2>Attendance</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody id="attendance-list">
+                    Dynamic content will be added here 
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="/static/script.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Detection Attendance</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Face Detection Attendance System</h1>
+    </header>
+    <main>
+        <section id="camera">
+            <h2>Live Feed</h2>
+            <img src="/video_feed" alt="Camera Feed" id="video-feed">
+        </section>
+        <section id="attendance">
+            <h2>Attendance</h2>
+            <form action="/capture" method="post">
+                <button type="submit">Capture Attendance</button>
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody id="attendance-list">
+                    {% for record in attendance %}
+                    <tr>
+                        <td>{{ record.name }}</td>
+                        <td>{{ record.time }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+    </main>
 </body>
 </html>
